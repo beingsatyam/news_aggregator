@@ -9,9 +9,9 @@ const crypto = require("crypto");
 
 async function getNews(req , res) {
 
-    const username = req.username;
+    const userId = req.userId;
 
-    const user = USERS.find((value) => value.username == username);
+    const user = USERS.find((value) => value.id == userId);
     let prefer = user.preferences;
 
     prefer = prefer.join(' OR ')
@@ -28,11 +28,11 @@ async function getNews(req , res) {
 
 async function markAsRead(req , res) {
 
-    const username = req.username;
+    const userId = req.userId;
 
     const { id } = req.params;
 
-    const user = USERS.find((value) => value.username == username);
+    const user = USERS.find((value) => value.id == userId);
 
     console.log(USERS_NEWS_MAP);
 
@@ -57,11 +57,11 @@ async function markAsRead(req , res) {
 
 async function markAsFavorite(req , res) {
 
-  const username = req.username;
+  const userId = req.userId;
 
   const { id } = req.params;
 
-  const user = USERS.find((value) => value.username == username);
+  const user = USERS.find((value) => value.id == userId);
 
   if (!(user.id in USERS_NEWS_MAP.favorite)) {
     USERS_NEWS_MAP.favorite[user.id] = [id];

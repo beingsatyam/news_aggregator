@@ -71,8 +71,10 @@ async function fetchNewsArticles(prefer) {
 
 
 async function getNewsArticles(prefer) {
-  const cacheKey = 'news_articles';
+  const cacheKey = prefer;
   const now = Date.now();
+
+  console.log(cacheKey);
 
   if (cache[cacheKey] && (now - cache[cacheKey].timestamp < CACHE_TTL)) {
     console.log('cached articles');
@@ -86,8 +88,8 @@ async function getNewsArticles(prefer) {
     data: articles,
     timestamp: now
   };
-
   console.log(cache);
+
 
   return articles;
 };

@@ -3,9 +3,10 @@ const USERS = require("../db/users.db");
 
 
 function uniqueUserCheck(req, res, next) {
-  const { username } = req.body;
+  const { email } = req.body;
+  console.log(email);
 
-  const user = USERS.find((value) => value.username == username);
+  const user = USERS.find((value) => value.email == email);
 
   if (user) {
       res.status(422).json(
