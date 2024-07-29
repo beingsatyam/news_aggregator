@@ -191,17 +191,21 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
     ```sh
     git clone https://github.com/beingsatyam/news_aggregator.git
     ```
-2. Install the dependencies:
+2. Navigate to project directory:
+    ```sh
+    cd news_aggregator
+    ```
+3. Install the dependencies:
     ```sh
     npm install
     ```
-3. Create a `.env` file and add your environment variables:
+4. Create a `.env` file and add your environment variables:
     ```plaintext
     PORT=3000
     JWT_SECRET=your_jwt_secret
     NEWS_API_KEY=your_news_api_key
     ```
-4. Start the server:
+5. Start the server:
     ```sh
     node app.js
     ```
