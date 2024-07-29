@@ -63,6 +63,12 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
  
 - **GET** `/users/preferences`  
   Get user preferences.
+  
+  - **Request Header:**
+    ```plaintext
+    Authorization : Bearer your_jwt_token
+    ```
+  
   - **Response:**
     ```json
     {
@@ -77,6 +83,12 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
  
 - **GET** `/news`  
   Fetch news based on user preferences.
+  
+  - **Request Header:**
+    ```plaintext
+    Authorization : Bearer your_jwt_token
+    ```
+  
   - **Response:**
     ```json
     {
@@ -99,6 +111,12 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
  
 - **POST** `/:id/read`  
   Mark news as read based on the ID.
+
+  - **Request Header:**
+    ```plaintext
+    Authorization : Bearer your_jwt_token
+    ```
+  
   - **Response:**
     ```json
     {
@@ -108,6 +126,12 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
  
 - **POST** `/:id/favorite`  
   Mark news as favorite based on the ID.
+
+  - **Request Header:**
+    ```plaintext
+    Authorization : Bearer your_jwt_token
+    ```
+  
   - **Response:**
     ```json
     {
@@ -117,6 +141,12 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
  
 - **GET** `/read`  
   Fetch all the news marked as read.
+
+  - **Request Header:**
+    ```plaintext
+    Authorization : Bearer your_jwt_token
+    ```
+  
   - **Response:**
     ```json
     {
@@ -133,6 +163,12 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
  
 - **GET** `/favorites`  
   Fetch all the news marked as favorite.
+
+  - **Request Header:**
+    ```plaintext
+    Authorization : Bearer your_jwt_token
+    ```
+  
   - **Response:**
     ```json
     {
