@@ -189,7 +189,7 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
  
 1. Clone the repository:
     ```sh
-    git clone <repository_url>
+    git clone https://github.com/beingsatyam/news_aggregator.git
     ```
 2. Install the dependencies:
     ```sh
