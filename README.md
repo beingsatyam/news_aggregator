@@ -147,33 +147,26 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
     ```sh
     git clone <repository_url>
     ```
-2. Navigate to the project directory:
-    ```sh
-    cd news-aggregator-api
-    ```
-3. Install the dependencies:
+2. Install the dependencies:
     ```sh
     npm install
     ```
-4. Create a `.env` file and add your environment variables:
+3. Create a `.env` file and add your environment variables:
     ```plaintext
     PORT=3000
     JWT_SECRET=your_jwt_secret
     NEWS_API_KEY=your_news_api_key
     ```
-5. Start the server:
+4. Start the server:
     ```sh
-    npm start
+    node app.js
     ```
  
 ## Usage
  
-- Use an API client like Postman to interact with the endpoints.
 - Register a new user and log in to get a token.
 - Use the token to set your preferences and fetch news based on those preferences.
 - Mark news articles as read or favorite, and fetch them later as needed.
  
-## License
- 
-This project is licensed under the MIT License.
+
  
