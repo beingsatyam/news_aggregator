@@ -12,7 +12,7 @@ async function createUser(req, res) {
 
       console.log(hashedPassword);
 
-      const _id =  USERS.length + 1? USERS.length : 1
+      const _id =  USERS.length ? USERS.length+1  : 1
 
       const userObj = {
         id : _id,
