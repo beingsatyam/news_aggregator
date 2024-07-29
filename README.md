@@ -1,7 +1,7 @@
 # News Aggregator API
  
-This is a News Aggregator API built with Node.js and Express.js. It allows users to register, log in, set their preferences, and fetch news articles based on their preferences. Users can also mark news articles as read or favorite them.
- 
+This is a News Aggregator API built with Node.js and Express.js. It allows users to register, log in, set their preferences, and fetch news articles based on their preferences. Users can also mark news articles as read or favorite them. An external news api has been used to fetch the news articles.
+
 ## Endpoints
  
 ### User Endpoints
@@ -182,6 +182,8 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
         ]
     }
     ```
+
+  
  
 ## Setup and Installation
  
@@ -204,11 +206,9 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
     node app.js
     ```
  
-## Usage
- 
-- Register a new user and log in to get a token.
-- Use the token to set your preferences and fetch news based on those preferences.
-- Mark news articles as read or favorite, and fetch them later as needed.
+## Notes on News Fetching
+ This API uses [newsapi.org](https://newsapi.org) to fetch news details. To reduce the no of external calls, the response is cached and updated every hour to keep the data relatively fresh. 
+
  
 
  
