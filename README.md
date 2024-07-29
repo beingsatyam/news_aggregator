@@ -42,6 +42,12 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
  
 - **PUT** `/users/preferences`  
   Update user preferences.
+
+  - **Request Header:**
+    ```plaintext
+    Authorization : Bearer your_jwt_token
+    ```
+  
   - **Request Body:**
     ```json
     {
