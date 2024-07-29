@@ -34,7 +34,9 @@ async function markAsRead(req , res) {
 
     const user = USERS.find((value) => value.username == username);
 
-    if (!(user.id in USERS_NEWS_MAP)) {
+    console.log(USERS_NEWS_MAP);
+
+    if (!(user.id in USERS_NEWS_MAP.read)) {
       USERS_NEWS_MAP.read[user.id] = [id];
     }
     else {
@@ -61,7 +63,7 @@ async function markAsFavorite(req , res) {
 
   const user = USERS.find((value) => value.username == username);
 
-  if (!(user.id in USERS_NEWS_MAP)) {
+  if (!(user.id in USERS_NEWS_MAP.favorite)) {
     USERS_NEWS_MAP.favorite[user.id] = [id];
   }
   else {
@@ -83,10 +85,6 @@ async function fetchNewsByID(req , res) {
 
   const { id } = req.params;
 
-  console.log(id);
-
-  console.log(NEWS);
-
   const availableNEWS = NEWS.find((value) => value.id == id);
   
   res.json({
@@ -106,15 +104,6 @@ async function getReadNews(req , res) {
   let userId = user.id;
 
   let readArticleIDs = USERS_NEWS_MAP.read[userId];
-
-  // const readArticles = [];
-
-  console.log(USERS_NEWS_MAP);
-  console.log(readArticleIDs);
-  console.log(NEWS);
-
-
-
 
   const readArticles = NEWS.filter(value =>  readArticleIDs.filter(x=>x==value.id).length>0)
 

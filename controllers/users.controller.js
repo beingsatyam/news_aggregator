@@ -59,7 +59,7 @@ async function loginUser(req, res) {
       const user = USERS.find((value) => value.email == email);
       if (!user) {
 
-        res.status(401).json({
+        return res.status(401).json({
           message: 'email not found!'
         });
       }
