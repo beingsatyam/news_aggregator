@@ -12,8 +12,9 @@ This is a News Aggregator API built with Node.js and Express.js. It allows users
     ```json
     { 
       "name" : "your_name",
-      "emai": "your_username",
-      "password": "your_password"
+      "email": "your_email",
+      "password": "your_password",
+       "preferences": ["trump" ,                          "tesla"]
     }
     ```
   - **Response:**
